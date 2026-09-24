@@ -10,9 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Unzip project
-        run: unzip newfile.zip -d app
-
       - name: Install dependencies
         run: |
           sudo apt update
@@ -20,11 +17,10 @@ jobs:
           pip install buildozer cython
 
       - name: Build APK
-        working-directory: app
         run: buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Mustafa-APK
-          path: app/bin/*.apk
+          path: bin/*.apk
