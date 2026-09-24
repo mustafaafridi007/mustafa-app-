@@ -6,6 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,jpeg
 version = 1.0
 requirements = python3,kivy
+android.api = 35
 orientation = portrait
 
 [buildozer]
