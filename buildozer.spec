@@ -15,3 +15,4 @@ warn_on_root = 1
 
 [app:android]
 android.archs = arm64-v8a
+android.sdk_path = /home/runner/.buildozer/android/platform/android-sdk
